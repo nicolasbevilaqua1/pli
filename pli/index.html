@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximizar Conforto</title>
+    <script src="https://github.com/hgourvest/glpk.js.git"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maximizar Conforto</h1>
+    <form id="form">
+        <label for="custo_carro">Custo Carro Uber:</label>
+        <input type="number" step="0.01" id="custo_carro" name="custo_carro" required><br>
+        <label for="custo_moto">Custo Moto Uber:</label>
+        <input type="number" step="0.01" id="custo_moto" name="custo_moto" required><br>
+        <label for="custo_bus">Custo Ônibus:</label>
+        <input type="number" step="0.01" id="custo_bus" name="custo_bus" required><br>
+        <label for="tempo_carro">Tempo Carro Uber:</label>
+        <input type="number" step="0.01" id="tempo_carro" name="tempo_carro" required><br>
+        <label for="tempo_moto">Tempo Moto Uber:</label>
+        <input type="number" step="0.01" id="tempo_moto" name="tempo_moto" required><br>
+        <label for="tempo_bus">Tempo Ônibus:</label>
+        <input type="number" step="0.01" id="tempo_bus" name="tempo_bus" required><br>
+        <label for="conforto_carro">Conforto Carro Uber:</label>
+        <input type="number" step="0.01" id="conforto_carro" name="conforto_carro" required><br>
+        <label for="conforto_moto">Conforto Moto Uber:</label>
+        <input type="number" step="0.01" id="conforto_moto" name="conforto_moto" required><br>
+        <label for="conforto_bus">Conforto Ônibus:</label>
+        <input type="number" step="0.01" id="conforto_bus" name="conforto_bus" required><br>
+        <label for="limite_custo">Limite de Custo:</label>
+        <input type="number" step="0.01" id="limite_custo" name="limite_custo" required><br>
+        <label for="limite_tempo">Limite de Tempo:</label>
+        <input type="number" step="0.01" id="limite_tempo" name="limite_tempo" required><br>
+        <input type="submit" value="Calcular">
+    </form>
+    <h2>Resultado</h2>
+    <div id="resultado"></div>
+    <script src="script.js"></script>
+</body>
+</html>
